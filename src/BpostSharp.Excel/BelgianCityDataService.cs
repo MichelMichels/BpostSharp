@@ -91,7 +91,9 @@ public class BelgianCityDataService(string sourceFilePath) : ICityDataService
             data.IsMunicipality = (isMunicipalityCell.ToString()) switch
             {
                 "Ja" => true,
+                "Oui" => true,
                 "Neen" => false,
+                "Non" => false,
                 "" => null,
                 _ => null,
             };
