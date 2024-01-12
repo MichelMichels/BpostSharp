@@ -1,7 +1,8 @@
-﻿using BpostSharp.Models;
+﻿using BpostSharp.Excel;
+using BpostSharp.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BpostSharp.Excel.Tests;
+namespace BpostSharp.Web.Tests;
 
 [TestClass()]
 public class BelgianCityDataServiceTests
@@ -11,7 +12,7 @@ public class BelgianCityDataServiceTests
     [TestMethod()]
     public void ThrowsArgumentNullException()
     {
-        Assert.ThrowsException<ArgumentNullException>(() => new BelgianCityDataService(null!));
+        Assert.ThrowsException<ArgumentNullException>(() => new WebCacheBuilder(null!));
     }
 
     [TestMethod]
@@ -20,7 +21,6 @@ public class BelgianCityDataServiceTests
     public async Task SearchCityByPostalCode(string postalCode, string cityName)
     {
         // Arrange
-
         // Act
         List<CityData> data = await GetService().GetByPostalCode(postalCode);
 
@@ -36,7 +36,6 @@ public class BelgianCityDataServiceTests
     public async Task SearchCityDataByName(string cityName, string postalCode)
     {
         // Arrange
-
         // Act
         List<CityData> data = await GetService().GetByCityName(cityName);
 
@@ -48,6 +47,6 @@ public class BelgianCityDataServiceTests
 
     private static BelgianCityDataService GetService()
     {
-        return belgianCityDataService ??= new(new ExcelCacheBuilder("Resources/zipcodes_num_nl_new.xls"));
+        return belgianCityDataService ??= new BelgianCityDataService(new WebCacheBuilder(BpostWebConstants.EndpointDutch));
     }
 }

@@ -4,39 +4,21 @@ using NPOI.SS.UserModel;
 
 namespace BpostSharp.Excel;
 
-public class BelgianCityDataService(string sourceFilePath) : ICityDataService
+public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 {
+    private readonly List<CityData> cache = [];
+
     private readonly string sourceFilePath = sourceFilePath ?? throw new ArgumentNullException(nameof(sourceFilePath));
 
-    private static List<CityData> cache = [];
-
-    public async Task<List<CityData>> GetByCityName(string name)
-    {
-        if (cache.Count == 0)
-        {
-            await Initialize();
-        }
-
-        return cache
-            .Where(x => x.Name.StartsWith(name, StringComparison.CurrentCultureIgnoreCase))
-            .ToList();
-    }
-
-    public async Task<List<CityData>> GetByPostalCode(string postalCode)
-    {
-        if (cache.Count == 0)
-        {
-            await Initialize();
-        }
-
-        return cache
-            .Where(x => x.PostalCode.StartsWith(postalCode))
-            .ToList();
-    }
-
-    private async Task Initialize()
+    public Task Clear()
     {
         cache.Clear();
+        return Task.CompletedTask;
+    }
+
+    public async Task Build()
+    {
+        await Clear();
 
         ISheet sheet;
 
@@ -46,6 +28,7 @@ public class BelgianCityDataService(string sourceFilePath) : ICityDataService
         sheet = workbook.GetSheetAt(0);
         IRow headerRow = sheet.GetRow(0);
         int cellCount = headerRow.LastCellNum;
+
         for (int i = sheet.FirstRowNum + 1; i <= sheet.LastRowNum; i++)
         {
             IRow row = sheet.GetRow(i);
@@ -64,6 +47,8 @@ public class BelgianCityDataService(string sourceFilePath) : ICityDataService
             cache.Add(data);
         }
     }
+    public IEnumerable<CityData> Get() => cache;
+    public bool HasCache() => cache.Count != 0;
 
     private CityData ConvertRow(IRow row)
     {
