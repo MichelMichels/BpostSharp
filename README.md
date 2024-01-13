@@ -51,10 +51,10 @@ Install-Package MichelMichels.BpostSharp.Web
 
 There are 2 versions of BpostSharp:
 
-| Name                             | Nuget                                                                                                                                                  | Description                                                                                                                |
-| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
-| `MichelMichels.BpostSharp.Excel` | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Excel"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Excel"/></a> | This package uses the excel files provided by Bpost as source for the data. You can use this version in offline scenarios. |
-| `MichelMichels.BpostSharp.Web`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Web"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Web"/></a>     | This package uses the html page provided by Bpost as source for the data. You can only use this in online scenarios.       |
+| Name                             | Nuget                                                                                                                                                  | Description           |
+| -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
+| `MichelMichels.BpostSharp.Excel` | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Excel"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Excel"/></a> | Excel cache (offline) |
+| `MichelMichels.BpostSharp.Web`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Web"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Web"/></a>     | Html cache (online)   |
 
 These 2 versions have following dependency: 
 
