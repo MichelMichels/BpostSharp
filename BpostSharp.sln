@@ -9,11 +9,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.Excel", "src\Bpo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.ExcelTests", "src\BpostSharp.ExcelTests\BpostSharp.ExcelTests.csproj", "{654B8BDB-1A20-4B2C-BFE9-66CB52CB8D89}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.Web", "BpostSharp.Web\BpostSharp.Web.csproj", "{70356579-A02E-4228-9FD1-02D3DF0432F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.Web", "src\BpostSharp.Web\BpostSharp.Web.csproj", "{70356579-A02E-4228-9FD1-02D3DF0432F4}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.WebTests", "BpostSharp.WebTests\BpostSharp.WebTests.csproj", "{973B7DDF-9688-4493-8D05-AD16B972E0DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BpostSharp.WebTests", "src\BpostSharp.WebTests\BpostSharp.WebTests.csproj", "{973B7DDF-9688-4493-8D05-AD16B972E0DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BpostSharp.Demo", "BpostSharp.Demo\BpostSharp.Demo.csproj", "{571DE3BC-178B-4674-8A44-422D6CE8C73B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BpostSharp.Demo", "src\BpostSharp.Demo\BpostSharp.Demo.csproj", "{571DE3BC-178B-4674-8A44-422D6CE8C73B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8FA2E7DA-F113-4299-86A2-40D75637FA10}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

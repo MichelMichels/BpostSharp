@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BpostSharp.Web\BpostSharp.Web.csproj" />
-    <ProjectReference Include="..\src\BpostSharp\BpostSharp.csproj" />
+    <ProjectReference Include="..\BpostSharp\BpostSharp.csproj" />
   </ItemGroup>
 
 </Project>
