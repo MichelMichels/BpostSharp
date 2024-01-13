@@ -17,9 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BpostSharp\MichelMichels.BpostSharp.csproj" /> 
+    <ProjectReference Include="..\MichelMichels.BpostSharp\MichelMichels.BpostSharp.csproj" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="" />
   </ItemGroup>

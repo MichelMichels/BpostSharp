@@ -17,7 +17,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BpostSharp.Excel\MichelMichels.BpostSharp.Excel.csproj" />
+    <ProjectReference
+      Include="..\MichelMichels.BpostSharp.Excel\MichelMichels.BpostSharp.Excel.csproj" />
   </ItemGroup>
 
   <ItemGroup>
