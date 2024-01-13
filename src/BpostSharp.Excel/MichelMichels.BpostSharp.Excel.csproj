@@ -5,22 +5,22 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>BpostSharp.Web</Title>
+    <Title>BpostSharp.Excel</Title>
     <Authors>Michel Michels</Authors>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="1.0.7" />
+    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="System.Security.Cryptography.Pkcs" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BpostSharp\BpostSharp.csproj" />
+    <ProjectReference Include="..\BpostSharp\MichelMichels.BpostSharp.csproj" /> 
   </ItemGroup>
-
+  
   <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="" />
   </ItemGroup>
-
 </Project>

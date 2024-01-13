@@ -1,6 +1,6 @@
-﻿using BpostSharp.Models;
+﻿using MichelMichels.BpostSharp.Models;
 
-namespace BpostSharp.Services;
+namespace MichelMichels.BpostSharp.Services;
 
 public interface ICityDataService
 {

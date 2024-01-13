@@ -17,13 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BpostSharp.Excel\BpostSharp.Excel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Resources\zipcodes_num_nl_new.xls">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <ProjectReference Include="..\BpostSharp.Web\MichelMichels.BpostSharp.Web.csproj" />
   </ItemGroup>
 
 </Project>

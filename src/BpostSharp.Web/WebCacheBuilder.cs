@@ -1,9 +1,9 @@
 ﻿using AngleSharp;
 using AngleSharp.Dom;
-using BpostSharp.Models;
-using BpostSharp.Services;
+using MichelMichels.BpostSharp.Models;
+using MichelMichels.BpostSharp.Services;
 
-namespace BpostSharp.Web;
+namespace MichelMichels.BpostSharp.Web;
 
 public class WebCacheBuilder(string endpoint) : ICacheBuilder<CityData>
 {

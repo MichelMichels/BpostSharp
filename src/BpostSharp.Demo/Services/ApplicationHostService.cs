@@ -2,7 +2,7 @@
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 
-namespace BpostSharp.Demo.Services;
+namespace MichelMichels.BpostSharp.Demo.Services;
 
 public class ApplicationHostService<TStartView>(IServiceProvider serviceProvider) : IHostedService where TStartView : Window
 {

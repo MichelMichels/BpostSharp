@@ -1,8 +1,8 @@
-﻿using BpostSharp.Models;
-using BpostSharp.Services;
+﻿using MichelMichels.BpostSharp.Models;
+using MichelMichels.BpostSharp.Services;
 using NPOI.SS.UserModel;
 
-namespace BpostSharp.Excel;
+namespace MichelMichels.BpostSharp.Excel;
 
 public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 {
@@ -84,7 +84,7 @@ public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 
         if (isMunicipalityCell != null)
         {
-            data.IsMunicipality = (isMunicipalityCell.ToString()) switch
+            data.IsMunicipality = isMunicipalityCell.ToString() switch
             {
                 "Ja" => true,
                 "Oui" => true,

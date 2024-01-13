@@ -1,8 +1,8 @@
-﻿using BpostSharp.Models;
-using BpostSharp.Services;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using MichelMichels.BpostSharp.Models;
+using MichelMichels.BpostSharp.Services;
 
-namespace BpostSharp.Demo.ViewModels;
+namespace MichelMichels.BpostSharp.Demo.ViewModels;
 
 public partial class MainViewModel(ICityDataService cityDataService) : ObservableObject
 {

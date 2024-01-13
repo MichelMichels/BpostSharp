@@ -1,7 +1,7 @@
-﻿using BpostSharp.Demo.ViewModels;
+﻿using MichelMichels.BpostSharp.Demo.ViewModels;
 using System.Windows;
 
-namespace BpostSharp.Demo
+namespace MichelMichels.BpostSharp.Demo
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

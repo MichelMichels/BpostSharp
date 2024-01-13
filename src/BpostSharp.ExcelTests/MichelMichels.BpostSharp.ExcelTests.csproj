@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -17,7 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BpostSharp.Web\BpostSharp.Web.csproj" />
+    <ProjectReference Include="..\BpostSharp.Excel\MichelMichels.BpostSharp.Excel.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Resources\zipcodes_num_nl_new.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

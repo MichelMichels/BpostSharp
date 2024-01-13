@@ -1,4 +1,4 @@
-﻿namespace BpostSharp.Models;
+﻿namespace MichelMichels.BpostSharp.Models;
 
 public record CityData
 {

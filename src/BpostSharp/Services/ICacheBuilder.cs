@@ -1,4 +1,4 @@
-﻿namespace BpostSharp.Services;
+﻿namespace MichelMichels.BpostSharp.Services;
 
 public interface ICacheBuilder<T> where T : class
 {

@@ -1,13 +1,13 @@
-﻿using BpostSharp.Demo.Services;
-using BpostSharp.Demo.ViewModels;
-using BpostSharp.Models;
-using BpostSharp.Services;
-using BpostSharp.Web;
+﻿using MichelMichels.BpostSharp.Demo.Services;
+using MichelMichels.BpostSharp.Demo.ViewModels;
+using MichelMichels.BpostSharp.Models;
+using MichelMichels.BpostSharp.Services;
+using MichelMichels.BpostSharp.Web;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Windows;
 
-namespace BpostSharp.Demo;
+namespace MichelMichels.BpostSharp.Demo;
 
 /// <summary>
 /// Interaction logic for App.xaml

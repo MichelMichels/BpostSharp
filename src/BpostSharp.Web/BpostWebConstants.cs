@@ -1,4 +1,4 @@
-﻿namespace BpostSharp.Web;
+﻿namespace MichelMichels.BpostSharp.Web;
 
 public static class BpostWebConstants
 {

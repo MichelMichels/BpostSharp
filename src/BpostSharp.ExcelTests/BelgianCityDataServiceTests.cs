@@ -1,9 +1,9 @@
-﻿using BpostSharp.Excel;
-using BpostSharp.Models;
-using BpostSharp.Services;
+﻿using MichelMichels.BpostSharp.Excel;
+using MichelMichels.BpostSharp.Models;
+using MichelMichels.BpostSharp.Services;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace BpostSharp.ExcelTests;
+namespace MichelMichels.BpostSharp.ExcelTests;
 
 [TestClass()]
 public class BelgianCityDataServiceTests
