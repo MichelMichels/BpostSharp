@@ -9,6 +9,8 @@ public class WebCacheBuilder(string endpoint) : ICacheBuilder<CityData>
 {
     private readonly string endpoint = endpoint ?? throw new ArgumentNullException(nameof(endpoint));
 
+    private bool isBuilding;
+
     private readonly List<CityData> cache = [];
 
     public IEnumerable<CityData> Get() => cache;
@@ -20,6 +22,12 @@ public class WebCacheBuilder(string endpoint) : ICacheBuilder<CityData>
     }
     public async Task Build()
     {
+        if (isBuilding)
+        {
+            return;
+        }
+
+        isBuilding = true;
         await Clear();
 
         IConfiguration config = Configuration.Default.WithDefaultLoader();
@@ -28,7 +36,7 @@ public class WebCacheBuilder(string endpoint) : ICacheBuilder<CityData>
         string rowSelector = "#sheet0 > tbody > tr";
         IHtmlCollection<IElement> rows = document.QuerySelectorAll(rowSelector);
 
-        foreach (IElement row in rows)
+        foreach (IElement row in rows.Skip(2))
         {
             IHtmlCollection<IElement> cells = row.QuerySelectorAll("td");
             if (cells.Length != 5)
@@ -38,6 +46,8 @@ public class WebCacheBuilder(string endpoint) : ICacheBuilder<CityData>
 
             cache.Add(ConvertRow(cells));
         }
+
+        isBuilding = false;
     }
 
     private static CityData ConvertRow(IHtmlCollection<IElement> cells)

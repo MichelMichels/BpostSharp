@@ -6,6 +6,8 @@ namespace BpostSharp.Excel;
 
 public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 {
+    private bool isBuilding;
+
     private readonly List<CityData> cache = [];
 
     private readonly string sourceFilePath = sourceFilePath ?? throw new ArgumentNullException(nameof(sourceFilePath));
@@ -18,6 +20,13 @@ public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 
     public async Task Build()
     {
+        if (isBuilding)
+        {
+            return;
+        }
+
+        isBuilding = true;
+
         await Clear();
 
         ISheet sheet;
@@ -46,6 +55,8 @@ public class ExcelCacheBuilder(string sourceFilePath) : ICacheBuilder<CityData>
 
             cache.Add(data);
         }
+
+        isBuilding = false;
     }
     public IEnumerable<CityData> Get() => cache;
     public bool HasCache() => cache.Count != 0;
