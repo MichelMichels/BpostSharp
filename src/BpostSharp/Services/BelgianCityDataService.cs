@@ -1,7 +1,6 @@
 ﻿using BpostSharp.Models;
-using BpostSharp.Services;
 
-namespace BpostSharp.Excel;
+namespace BpostSharp.Services;
 
 public class BelgianCityDataService(ICacheBuilder<CityData> cacheBuilder) : ICityDataService
 {
