@@ -1,26 +1,19 @@
-<h1 align="center">
-    ✉️ BpostSharp
-</h1>
+# BpostSharp ✉️
 
-<br />
+This projects is a C# wrapper library to obtain Belgian city data from bpost (Belgian national mail service).
 
-<div align="center">
-    This projects is a C# wrapper library to obtain Belgian city data from bpost (Belgian national mail service).
-</div>
-
-<br />
-<br />
 
 <details>
 <summary>Table of Contents</summary>
 
-- [Prerequisites](#prerequisites)
-- [Building](#building)
-- [Installation](#installation)
-- [Getting started](#getting-started)
-  - [Example code](#example-code)
-- [Code explanation](#code-explanation)
-- [Credits](#credits)
+- [BpostSharp ✉️](#bpostsharp-️)
+  - [Prerequisites](#prerequisites)
+  - [Building](#building)
+  - [Installation](#installation)
+  - [Getting started](#getting-started)
+    - [Example code](#example-code)
+  - [Code explanation](#code-explanation)
+  - [Credits](#credits)
 
 </details>
 
@@ -37,15 +30,16 @@ Use [Visual Studio 2022](https://visualstudio.microsoft.com/vs/) to build the pr
 
 Get the NuGet packages from [nuget.org](https://www.nuget.org/) or search for `MichelMichels.BpostSharp` in the GUI package manager in Visual Studio.
 
-You can also use the cli of the package manager with following command:
+You can also use the cli of the package manager with one of following commands:
 
 ```cli
-Install-Package MichelMichels.BpostSharp
 Install-Package MichelMichels.BpostSharp.Excel
 Install-Package MichelMichels.BpostSharp.Web
 ```
-<br />
-<hr>
+
+Above commands will also add a dependency to `MichelMichels.BpostSharp`. This nuget package contains the core code.
+
+---
 
 ## Getting started
 
@@ -61,6 +55,9 @@ These 2 versions have following dependency:
 | Name                       | Nuget                                                                                                                                      | Description                                                        |
 | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------ |
 | `MichelMichels.BpostSharp` | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp"/></a> | This is the core package which contains all interfaces and models. |
+
+To use the excel version, use any version of [the files at the official bpost website](https://www.bpost.be/nl/postcodevalidatie-tool).
+To use the web version, grab one of the HTML versions on the same page.
 
 ### Example code
 
