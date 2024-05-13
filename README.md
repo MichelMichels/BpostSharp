@@ -76,10 +76,10 @@ ICityDataService cityDataService = new BelgianCityDataService(webCacheBuilder);
 Querying data:
 ```csharp
 // Querying by postal code
-CityData data = await cityDataService.GetByPostalCode("9000");
+List<CityData> data = await cityDataService.GetByPostalCode("9000");
 
 // Querying by city name
-CityData data = await cityDataService.GetByCityName("Gent");
+List<CityData> data = await cityDataService.GetByCityName("Gent");
 ```
 
 ## Code explanation

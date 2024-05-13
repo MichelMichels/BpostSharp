@@ -10,12 +10,12 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Version bump
+      * Updated AngleSharp to v1.1.2
     </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="AngleSharp" Version="1.0.7" />
+    <PackageReference Include="AngleSharp" Version="1.1.2" />
   </ItemGroup>
 
   <ItemGroup>

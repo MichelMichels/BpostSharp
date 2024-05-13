@@ -10,12 +10,12 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Removed faulty dependency on `System.Security.Cryptography.Pkcs` 
+      * Updated NPOI to version 2.7.0
     </PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="NPOI" Version="2.6.2" />
+    <PackageReference Include="NPOI" Version="2.7.0" />
   </ItemGroup>
 
   <ItemGroup>
