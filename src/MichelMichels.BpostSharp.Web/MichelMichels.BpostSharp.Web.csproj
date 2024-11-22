@@ -10,7 +10,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Updated AngleSharp to v1.1.2
+      * Nuget package updates
     </PackageReleaseNotes>
   </PropertyGroup>
 

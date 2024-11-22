@@ -10,7 +10,7 @@
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageReleaseNotes>
-      * Updated NPOI to version 2.7.0
+      * Nuget package updates
     </PackageReleaseNotes>
   </PropertyGroup>
 
