@@ -34,6 +34,7 @@ You can also use the cli of the package manager with one of following commands:
 
 ```cli
 Install-Package MichelMichels.BpostSharp.Excel
+Install-Package MichelMichels.BpostSharp.Csv
 Install-Package MichelMichels.BpostSharp.Web
 ```
 
@@ -43,11 +44,12 @@ Above commands will also add a dependency to `MichelMichels.BpostSharp`. This nu
 
 ## Getting started
 
-There are 2 versions of BpostSharp:
+There are 3 versions of BpostSharp:
 
 | Name                             | Nuget                                                                                                                                                  | Description           |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------- |
 | `MichelMichels.BpostSharp.Excel` | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Excel"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Excel"/></a> | Excel cache (offline) |
+| `MichelMichels.BpostSharp.Csv`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Csv"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Csv"/></a>     | Csv cache (offline)   |
 | `MichelMichels.BpostSharp.Web`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Web"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Web"/></a>     | Html cache (online)   |
 
 These 2 versions have following dependency: 
@@ -57,6 +59,7 @@ These 2 versions have following dependency:
 | `MichelMichels.BpostSharp` | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp"/></a> | This is the core package which contains all interfaces and models. |
 
 To use the excel version, use any version of [the files at the official bpost website](https://www.bpost.be/nl/postcodevalidatie-tool).
+To use the csv version, use any version of the excel version, and convert to a UTF-8 csv file.
 To use the web version, grab one of the HTML versions on the same page.
 
 ### Example code
@@ -72,6 +75,13 @@ Creating an excel instance:
 ICacheBuilder<CityData> webCacheBuilder = new ExcelCacheBuilder("excel-from-bpost.xls");
 ICityDataService cityDataService = new BelgianCityDataService(webCacheBuilder);
 ```
+
+Creating an csv instance:
+```csharp
+ICacheBuilder<CityData> webCacheBuilder = new CsvCacheBuilder("converted-excel-as-csv-from-bpost.csv");
+ICityDataService cityDataService = new BelgianCityDataService(webCacheBuilder);
+```
+
 
 Querying data:
 ```csharp
