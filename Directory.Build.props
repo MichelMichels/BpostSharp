@@ -1,7 +1,8 @@
 <Project>
   <PropertyGroup>
-    <Version>1.1.0.0</Version>
-    <FileVersion>1.1.0.0</FileVersion>
-    <InformationalVersion>1.1.0.0</InformationalVersion>
+    <BpostSharpVersion>1.1.0.0</BpostSharpVersion>
+    <Version>$(BpostSharpVersion)</Version>
+    <FileVersion>$(BpostSharpVersion)</FileVersion>
+    <InformationalVersion>$(BpostSharpVersion)</InformationalVersion>
   </PropertyGroup>
 </Project>
