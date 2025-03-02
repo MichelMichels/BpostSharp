@@ -1,13 +1,13 @@
-﻿using MichelMichels.BpostSharp.Excel;
+﻿using MichelMichels.BpostSharp.Csv;
 using MichelMichels.BpostSharp.Models;
 using MichelMichels.BpostSharp.Services;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
-namespace MichelMichels.BpostSharp.ExcelTests;
+namespace MichelMichels.BpostSharp.CsvTests;
+
 
 [TestClass()]
-public class BelgianCityDataServiceTests
+public sealed class BelgianCityDataServiceTests
 {
     private static BelgianCityDataService? belgianCityDataService;
 
@@ -28,7 +28,6 @@ public class BelgianCityDataServiceTests
         List<CityData> data = await GetService().GetByPostalCode(postalCode);
 
         // Assert
-        Assert.IsNotNull(data);
         Assert.AreEqual(1, data.Where(x => x.IsMunicipality.HasValue && !x.IsMunicipality.Value).Count(), $"Expected 1, but found following results: [ {string.Join(',', data.Select(x => x.Name))} ]");
         Assert.AreEqual(cityName, data.Where(x => x.IsMunicipality.HasValue && !x.IsMunicipality.Value).Single().Name);
     }
@@ -44,7 +43,6 @@ public class BelgianCityDataServiceTests
         List<CityData> data = await GetService().GetByCityName(cityName);
 
         // Assert
-        Assert.IsNotNull(data);
         Assert.AreEqual(1, data.Where(x => x.IsMunicipality.HasValue && !x.IsMunicipality.Value).Count(), $"Expected 2, but found following results: [ {string.Join(',', data.Select(x => x.Name))} ]");
         Assert.AreEqual(postalCode, data.First().PostalCode);
     }
@@ -73,6 +71,7 @@ public class BelgianCityDataServiceTests
 
     private static BelgianCityDataService GetService()
     {
-        return belgianCityDataService ??= new(new ExcelCacheBuilder("Resources/zipcodes_num_nl_2025.xls"));
+        return belgianCityDataService ??= new(new CsvCacheBuilder("Resources/zipcodes_num_nl_2025.csv"));
     }
 }
+

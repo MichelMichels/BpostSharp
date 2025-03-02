@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\zipcodes_num_nl_new.xls">
+    <None Update="Resources\zipcodes_num_nl_2025.xls">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
