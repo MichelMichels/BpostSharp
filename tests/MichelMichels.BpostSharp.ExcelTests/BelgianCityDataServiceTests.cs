@@ -50,6 +50,6 @@ public class BelgianCityDataServiceTests
 
     private static BelgianCityDataService GetService()
     {
-        return belgianCityDataService ??= new(new ExcelCacheBuilder("Resources/zipcodes_num_nl_new.xls"));
+        return belgianCityDataService ??= new(new ExcelCacheBuilder("Resources/zipcodes_num_nl_2025.xls"));
     }
 }
