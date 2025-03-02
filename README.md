@@ -52,6 +52,9 @@ There are 3 versions of BpostSharp:
 | `MichelMichels.BpostSharp.Csv`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Csv"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Csv"/></a>     | Csv cache (offline)   |
 | `MichelMichels.BpostSharp.Web`   | <a href="https://www.nuget.org/packages/MichelMichels.BpostSharp.Web"><img src="https://img.shields.io/nuget/v/MichelMichels.BpostSharp.Web"/></a>     | Html cache (online)   |
 
+> [!NOTE]
+> The excel and csv version are basically the same. The excel version takes an external dependency on the package NPOI to parse the .xls file. If you don't want this dependency, use the csv version and convert the .xls file.
+
 These 2 versions have following dependency: 
 
 | Name                       | Nuget                                                                                                                                      | Description                                                        |
