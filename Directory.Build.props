@@ -4,6 +4,6 @@
     <Version>$(BpostSharpVersion)</Version>
     <FileVersion>$(BpostSharpVersion)</FileVersion>
     <InformationalVersion>$(BpostSharpVersion)</InformationalVersion>
-	<TargetFramework>net8.0</TargetFramework>
+	<TargetFramework>net10.0</TargetFramework>
   </PropertyGroup>
 </Project>
