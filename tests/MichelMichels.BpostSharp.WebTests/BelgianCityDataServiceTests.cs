@@ -1,7 +1,6 @@
 ﻿using MichelMichels.BpostSharp.Models;
 using MichelMichels.BpostSharp.Services;
 using MichelMichels.BpostSharp.Web;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace MichelMichels.BpostSharp.WebTests;
 
@@ -13,7 +12,7 @@ public class BelgianCityDataServiceTests
     [TestMethod()]
     public void ThrowsArgumentNullException()
     {
-        Assert.ThrowsException<ArgumentNullException>(() => new WebCacheBuilder(null!));
+        Assert.Throws<ArgumentNullException>(() => new WebCacheBuilder(null!));
     }
 
     [TestMethod]

@@ -5,16 +5,15 @@ using System.Diagnostics;
 
 namespace MichelMichels.BpostSharp.CsvTests;
 
-
-[TestClass()]
-public sealed class BelgianCityDataServiceTests
+[TestClass]
+public class BelgianCityDataServiceTests
 {
     private static BelgianCityDataService? belgianCityDataService;
 
     [TestMethod()]
     public void ThrowsArgumentNullException()
     {
-        Assert.ThrowsException<ArgumentNullException>(() => new BelgianCityDataService(null!));
+        Assert.Throws<ArgumentNullException>(() => new BelgianCityDataService(null!));
     }
 
     [TestMethod]

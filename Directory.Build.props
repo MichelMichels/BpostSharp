@@ -1,8 +1,9 @@
 <Project>
   <PropertyGroup>
-    <BpostSharpVersion>1.1.0.0</BpostSharpVersion>
+    <BpostSharpVersion>2.0.0</BpostSharpVersion>
     <Version>$(BpostSharpVersion)</Version>
     <FileVersion>$(BpostSharpVersion)</FileVersion>
     <InformationalVersion>$(BpostSharpVersion)</InformationalVersion>
+	<TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
 </Project>

@@ -1,7 +1,6 @@
 ﻿using MichelMichels.BpostSharp.Excel;
 using MichelMichels.BpostSharp.Models;
 using MichelMichels.BpostSharp.Services;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Diagnostics;
 
 namespace MichelMichels.BpostSharp.ExcelTests;
@@ -14,7 +13,7 @@ public class BelgianCityDataServiceTests
     [TestMethod()]
     public void ThrowsArgumentNullException()
     {
-        Assert.ThrowsException<ArgumentNullException>(() => new BelgianCityDataService(null!));
+        Assert.Throws<ArgumentNullException>(() => new BelgianCityDataService(null!));
     }
 
     [TestMethod]
